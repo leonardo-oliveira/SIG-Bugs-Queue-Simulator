@@ -14,5 +14,29 @@ import java.util.ArrayList;
  */
 public class Data implements Serializable
 {
+   public ArrayList<String> loadData()
+   {
+      String content="";
+      ArrayList<String> arrayOfInputs = new ArrayList<String>();
 
+      try
+      {
+         FileReader fr = new FileReader("data/entrada.txt");
+         BufferedReader loadArq = new BufferedReader(fr);
+
+         if(!fr.exists()) return null;
+
+         String lineContent = loadArq.readLine();
+         while(!lineContent == null)
+         {
+            arrayOfInputs.add(loadArq.readLine());
+         }
+         loadArq.close();
+         return arrayOfInputs;
+
+      }catch(Exception e)
+         {
+
+         }
+   }
 }

@@ -2,6 +2,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.io.FileReader;
 import java.io.BufferedReader;
+import java.util.PriorityQueue;
 
 //package br.ufla.dcc.gcc110.s2016_02.trabalho2;
 
@@ -14,7 +15,7 @@ import java.io.BufferedReader;
  * @version 1.1
  *
  */
-public class Data implements SimuladorEventos
+public class Data
 {
    //public Evento loadEvent()
 //   {
@@ -23,7 +24,7 @@ public class Data implements SimuladorEventos
 //   }
 
    public PriorityQueue<Evento> returnEvents()
-   {
+   {  
       try
       {
          FileReader fr = new FileReader("Data/files/entrada.txt");
@@ -31,29 +32,20 @@ public class Data implements SimuladorEventos
          PriorityQueue<Evento> pq = new PriorityQueue<Evento>();
          String[] tokens = new String[3];
          String text = bf.readLine();
-         Bug bug;
+         Event event;
          text = bf.readLine();
 
          while(!text.isEmpty())
          {
-            tokens = text.split();
-            if(tokens[3].charAt(0) == 'a')
-            {
-               bug = new SimpleBug(Int.parseInt(tokens[0]), tokens[1].charAt(0), tokens[3].charAt(0));
-            }else if(tokens[3].charAt(0) == 'b')
-               {
-                  bug = new MediumBug(Int.parseInt(tokens[0]), tokens[1].charAt(0), tokens[3].charAt(0));
-               }else if(tokens[3].charAt(0) == 'c')
-                  {
-                     bug = new ComplexBug(Int.parseInt(tokens[0]), tokens[1].charAt(0), tokens[3].charAt(0));
-                  }
-            pq.add(bug);
+            tokens = text.split(" ");
+            event = new Event(Integer.parseInt(tokens[0]), tokens[1], new Bug(tokens[2]));
+            pq.add(event);
          }
          return pq;
 
       }catch(Exception e)
          {
-            return 0;
+            return null;
          }
    }
 

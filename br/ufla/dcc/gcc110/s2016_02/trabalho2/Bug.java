@@ -1,4 +1,5 @@
 /**
+ * CLASSE BUG
  * Classe responsavel pela representação da entidade BUG, abstraida a partir
  * de um objeto na solução proposta.
  * Superclasse para as subclasses representativas de niveis de bug.
@@ -9,12 +10,36 @@
  * @version 1.0
  *
  */
-public abstract class bug implements Entidade
+public class Bug implements EntidadeAtendida
 {
-   public Bug(int time, char status, char tipo)
+   private String identificacao;
+   private int time;
+
+   public Bug(int time, String tipo)
    {
       setTime(time);
-      setStatus(status);
-      setTipo(tipo);
+      setIdentificacao(tipo);
    }
+
+   public Bug(String type)
+   {
+      setIdentificacao(type);
+   }
+
+   public void setIdentificacao(String c)
+   {
+      this.identificacao = c;
+   }
+
+   public void setTime(int time)
+   {
+      this.time = time;
+   }
+
+   @Override
+   public String getIdentificacao()
+   {
+      return this.identificacao;
+   }
+
 }

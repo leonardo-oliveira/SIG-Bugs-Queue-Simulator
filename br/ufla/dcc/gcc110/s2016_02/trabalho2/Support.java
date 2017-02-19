@@ -1,6 +1,8 @@
-import base.Atendente.java;
+//package br.ufla.dcc.gcc110.s2016_02.trabalho2;
+//import base.Atendente;
 
 /**
+ * CLASSE SUPPORT
  * Classe responsavel pela representação da entidade Support. Define as caracteristicas
  * pertinentes aos atendentes em geral, especializados pelas subclasses Junior, Senior e
  * Pleno.
@@ -8,7 +10,7 @@ import base.Atendente.java;
  * Implementa a interface cedida pelo professor, Atendente.
  * 
  * @author Lucas Fonseca dos Santos, Leonardo Carvalho de Oliveira, Caio Vinicius.
- * @version 1.1
+ * @version 1.0
  * 
  */
 public abstract class Support implements Atendente
@@ -18,7 +20,7 @@ public abstract class Support implements Atendente
 
    public Support(double complexTime, double mediumTime, double simpleTime)
    {
-      serviceTime = new int[3];
+      serviceTime = new double[3];
       setServiceTime(complexTime, mediumTime, simpleTime);
    }
 

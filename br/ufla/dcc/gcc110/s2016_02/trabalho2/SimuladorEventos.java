@@ -8,7 +8,7 @@
  * 
  * Prof. Júlio César Alves
  */
-package br.ufla.dcc.gcc110.s2016_02.trabalho2.base;
+//package br.ufla.dcc.gcc110.s2016_02.trabalho2;
 
 import java.util.List;
 import java.util.PriorityQueue;

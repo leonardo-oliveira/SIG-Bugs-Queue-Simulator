@@ -7,7 +7,7 @@
  * Herda a superclasse Support.
  * 
  * @author Lucas Fonseca dos Santos, Leonardo Carvalho de Oliveira, Caio Vinicius.
- * @version 1.1
+ * @version 1.0
  * 
  */
 public class SupportSenior extends Support

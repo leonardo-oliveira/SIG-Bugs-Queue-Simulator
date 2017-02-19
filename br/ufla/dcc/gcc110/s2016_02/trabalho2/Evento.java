@@ -8,7 +8,7 @@
  * 
  * Prof. Júlio César Alves
  */
-package br.ufla.dcc.gcc110.s2016_02.trabalho2.base;
+//package br.ufla.dcc.gcc110.s2016_02.trabalho2.base;
 
 /**
  * Interface que define os métodos comuns a todos os Eventos simulados.

@@ -3,14 +3,14 @@
 /**
  * SIMULADOR DISCRETO DE EVENTOS PARA FILA DE REGISTRO DE BUGS
  * NO SISTEMA SIG.
- * 
+ *
  * @author Lucas Fonseca dos Santos, Leonardo Carvalho de Oliveira, Caio Vinicius.
  * @version 1.0
- * 
+ *
  */
-public class Main 
+public class Main
 {
-   public static void main(String[] args) 
+   public static void main(String[] args)
    {
       Simulator s = new Simulator();
       s.execute();

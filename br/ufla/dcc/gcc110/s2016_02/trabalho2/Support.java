@@ -6,25 +6,25 @@
  * Classe responsavel pela representação da entidade Support. Define as caracteristicas
  * pertinentes aos atendentes em geral, especializados pelas subclasses Junior, Senior e
  * Pleno.
- * 
+ *
  * Implementa a interface cedida pelo professor, Atendente.
- * 
+ *
  * @author Lucas Fonseca dos Santos, Leonardo Carvalho de Oliveira, Caio Vinicius.
  * @version 1.0
- * 
+ *
  */
 public abstract class Support implements Atendente
 {
-   private double[] serviceTime;
+   private int[] serviceTime;
    private String name;
 
-   public Support(double complexTime, double mediumTime, double simpleTime)
+   public Support(int complexTime, int mediumTime, int simpleTime)
    {
-      serviceTime = new double[3];
+      serviceTime = new int[3];
       setServiceTime(complexTime, mediumTime, simpleTime);
    }
 
-   public void setServiceTime(double complexTime, double mediumTime, double simpleTime) 
+   public void setServiceTime(int complexTime, int mediumTime, int simpleTime) 
    {
       this.serviceTime[0] = complexTime;
       this.serviceTime[1] = mediumTime;

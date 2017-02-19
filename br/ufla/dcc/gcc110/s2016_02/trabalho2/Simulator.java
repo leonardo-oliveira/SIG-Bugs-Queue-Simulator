@@ -8,7 +8,7 @@ import java.util.List;
  * Classe responsável por toda a execução lógica do simulador de eventos discreto.
  * Recebe os dados do arquivo de entrada, interpreta-os, configura a execução dos
  * eventos e processa-os de acordo com as configurações informadas pela entrada.
- * 
+ *
  * @author Lucas Fonseca dos Santos, Leonardo Carvalho de Oliveira, Caio Vinicius
  * @version 1.0
  */
@@ -27,14 +27,37 @@ public class Simulator implements SimuladorEventos
 
    public void execute()
    {
+      setQtdSupports(dt.returnSupports());
+      setMethodQueue(dt.returnMethodQueue());
 
-      methodQueue = dt.returnMethodQueue();
    }
 
    @Override
    public List<Atendente> getAtendentes()
    {
-      return dt.returnSupports();
+      int qtd = dt.returnSupports();
+      Support sp;
+      List<Atendente> att = new List<Atendente>();
+      int count=0;
+      int aux = count;
+
+      for(int i=1; i <= qtd; i++)
+      {
+         if(i%3 == 1)
+         {
+            sp = new SupportSenior();
+            att.add(sp);
+         }else if(i%3 == 2)
+            {
+               sp = new SupportPleno();
+               att.add(sp);
+            }else if(i%3 == 0)
+               {
+                  sp = new SupportJunior();
+                  att.add(sp);
+               }
+      }
+      return att;
    }
 
    @Override
@@ -44,8 +67,18 @@ public class Simulator implements SimuladorEventos
    }
 
    @Override
-   private final void adicionarEvento(Evento evento) 
+   private final void adicionarEvento(Evento evento)
    {
       filaEventos.add(evento);
+   }
+
+   private void setQtdSupports(int qtdSupports)
+   {
+      this.qtdSupports = qtdSupports;
+   }
+
+   private void setMethodQueue(int methodQueue)
+   {
+      this.methodQueue = methodQueue;
    }
 }

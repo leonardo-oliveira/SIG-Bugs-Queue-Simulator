@@ -2,6 +2,7 @@
 //package br.ufla.dcc.gcc110.s2016_02.trabalho2;
 //import base.SimuladorEventos;
 import java.util.List;
+import java.util.PriorityQueue;
 
 /**
  * CLASSE SIMULATOR
@@ -12,7 +13,7 @@ import java.util.List;
  * @author Lucas Fonseca dos Santos, Leonardo Carvalho de Oliveira, Caio Vinicius
  * @version 1.0
  */
-public class Simulator implements SimuladorEventos
+public class Simulator extends SimuladorEventos
 {
    private int qtdSupports;
    private int methodQueue;
@@ -32,7 +33,6 @@ public class Simulator implements SimuladorEventos
 
    }
 
-   @Override
    public List<Atendente> getAtendentes()
    {
       int qtd = dt.returnSupports();
@@ -60,13 +60,11 @@ public class Simulator implements SimuladorEventos
       return att;
    }
 
-   @Override
    private void carregarEvento() {
       Evento event = dt.loadEvent();
       adicionarEvento(event);
    }
 
-   @Override
    private final void adicionarEvento(Evento evento)
    {
       filaEventos.add(evento);
@@ -81,4 +79,5 @@ public class Simulator implements SimuladorEventos
    {
       this.methodQueue = methodQueue;
    }
+
 }

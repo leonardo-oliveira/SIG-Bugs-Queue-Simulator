@@ -2,19 +2,19 @@
 
 /**
  * Classe responsavel pela geração de arquivos log do sistema. Registra todas as operações
- * executadas pelo usuario, bem como falhas do sistema e resultados, munidos de horarios e    
+ * executadas pelo usuario, bem como falhas do sistema e resultados, munidos de horarios e
  * dados para futuras auditorias.
- * 
+ *
  * @author Lucas Fonseca dos Santos, Leonardo Carvalho de Oliveira, Caio Vinicius.
  * @version 1.1
- * 
+ *
  */
-public class Logger 
+public class Logger
 {
-   try 
+   /*try
    {
       File logFile = new File("logs/"+date+"-LOG.txt");
-      
+
       if(!logFile.exists())
       {
          try
@@ -25,13 +25,13 @@ public class Logger
 
             }
       }
-      
+
       FileReader fr = new FileReader("logs/"+date+"-LOG.txt");
       FileWriter fw = new FileWriter(fr);
-      
+
 
    }catch()
       {
 
-      }
+      }*/
 }

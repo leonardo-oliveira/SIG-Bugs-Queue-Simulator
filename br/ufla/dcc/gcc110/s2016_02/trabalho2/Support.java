@@ -1,4 +1,4 @@
-//package br.ufla.dcc.gcc110.s2016_02.trabalho2;
+   //package br.ufla.dcc.gcc110.s2016_02.trabalho2;
 //import base.Atendente;
 
 /**
@@ -24,7 +24,7 @@ public abstract class Support implements Atendente
       setServiceTime(complexTime, mediumTime, simpleTime);
    }
 
-   public void setServiceTime(int complexTime, int mediumTime, int simpleTime) 
+   public void setServiceTime(int complexTime, int mediumTime, int simpleTime)
    {
       this.serviceTime[0] = complexTime;
       this.serviceTime[1] = mediumTime;

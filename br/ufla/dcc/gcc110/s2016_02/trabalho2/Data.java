@@ -24,7 +24,7 @@ public class Data
 //   }
 
    public PriorityQueue<Evento> returnEvents()
-   {  
+   {
       try
       {
          FileReader fr = new FileReader("Data/files/entrada.txt");
@@ -63,7 +63,6 @@ public class Data
             return 0;
          }else
          {
-            System.out.println(numberMethod);
             return Integer.parseInt(numberMethod);
          }
       }catch(Exception e)
@@ -84,7 +83,6 @@ public class Data
             return 0;
          }else
          {
-            System.out.println(qtdSupports);
             return Integer.parseInt(qtdSupports);
          }
       }catch(Exception e)
